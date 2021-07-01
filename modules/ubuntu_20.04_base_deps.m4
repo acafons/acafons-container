@@ -21,7 +21,6 @@ RUN apt-get update && \
     gawk \
     python3 \
     python3-pip \
-    libyaml-dev \
-    meson
+    libyaml-dev
 
 
