@@ -30,6 +30,8 @@ RUN dnf -y install \
     perl-Digest-SHA \
     gawk \
     python3-devel \
-    meson
+    ninja-build
+
+RUN python3 -m pip install meson
 
 WORKDIR /

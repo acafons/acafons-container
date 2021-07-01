@@ -19,12 +19,13 @@ RUN zypper -n in \
     which \
     gcc-c++ \
     gawk \
-    python \
-    python-pip \
-    meson
+    python3 \
+    python3-pip \
+    ninja
 
 # Python2 since OpenSuse default
-RUN python -m pip install --upgrade pip
-RUN python -m pip install pyyaml
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install pyyaml
+RUN python3 -m pip install meson
 
 WORKDIR /

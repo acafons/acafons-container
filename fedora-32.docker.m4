@@ -30,11 +30,13 @@ RUN dnf -y install \
     perl-Digest-SHA \
     gawk \
     python3-devel \
-    meson
+    ninja-build
 
 # make install goes into /usr/local/lib/pkgconfig which is non-standard
 # Set this so ./configure can find things and we don't have to worry about prefix changes
 # to build instructions
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+RUN python3 -m pip install meson
 
 WORKDIR /

@@ -21,6 +21,5 @@ RUN apt-get update && \
     gawk \
     python3 \
     python3-pip \
-    libyaml-dev
-
-
+    libyaml-dev \
+    ninja-build
